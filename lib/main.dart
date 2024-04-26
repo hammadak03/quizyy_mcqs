@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quizyy_mcqs/screens/user_login.dart';
+import 'package:quizyy_mcqs/routes/route_names.dart';
+import 'package:quizyy_mcqs/routes/routes.dart';
 import 'package:quizyy_mcqs/utils/colors.dart';
 
 void main() {
@@ -20,11 +21,12 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: primaryBackgroundColor,
           textTheme: GoogleFonts.balooBhai2TextTheme(
-              const TextTheme(bodyText1: TextStyle(color: Colors.white))),
+              const TextTheme(bodyLarge: TextStyle(color: Colors.white))),
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        home: const UserLoginScreen(),
+        initialRoute: RoutesNames.userLoginScreen,
+        onGenerateRoute: Routes.generateRoute,
       ),
     );
   }
