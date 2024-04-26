@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
+import 'package:quizyy_mcqs/routes/route_names.dart';
 import 'package:quizyy_mcqs/utils/colors.dart';
 import 'package:quizyy_mcqs/widgets/login_button.dart';
 import 'package:quizyy_mcqs/widgets/reuseable_components.dart';
@@ -29,7 +29,11 @@ class UserLoginScreen extends StatelessWidget {
             SizedBox(
               height: 40.h,
             ),
-            loginButton(context: context, loginTxt: "Login With Google")
+            loginButton(
+                context: context,
+                loginTxt: "Login With Google",
+                onTab: () => Navigator.pushNamedAndRemoveUntil(
+                    context, RoutesNames.homeScreen, (route) => false))
           ],
         ),
       ),

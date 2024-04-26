@@ -10,9 +10,11 @@ reuseText(
   String text,
   Color color,
   double fontSize, {
+  TextAlign? textAlign,
   FontWeight? fontWeight,
 }) {
   return Text(text,
+      textAlign: textAlign,
       style: TextStyle(
           color: color, fontSize: fontSize.sp, fontWeight: fontWeight));
 }

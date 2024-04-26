@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class ScreenUtils {
+class ResponsiveScreen {
   static double height(BuildContext context) {
     return MediaQuery.of(context).size.height;
   }
